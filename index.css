@@ -1,0 +1,225 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* end of css reset */
+:root {
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77a047;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--dark-green);
+  background-color: var(--snow);
+}
+
+.wrapper {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.baddie-btn-el {
+  display: flex;
+  justify-content: center;
+}
+
+.baddie-btn {
+  border: 1px solid black;
+  border-radius: 999px;
+  width: 300px;
+  background-color: #ffd966;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  cursor: pointer;
+}
+
+.elf-hangout-zone {
+  /* Limit the number of elves to 6 per row. */
+  /* Make sure that the elves stay in the elf hangout zone, 
+    no matter how many there are. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  flex-direction: column;
+  background-image: url(/background-room.png);
+  background-position: center;
+  background-size: cover;
+  min-width: 450px;
+  min-height: 450px;
+  max-width: 5ch;
+  overflow-y: scroll;
+  padding: 1em 2em;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  position: relative;
+  z-index: 2000;
+}
+
+.baddie-hangout-zone-el {
+  margin-top: 2em;
+
+  max-width: 500px;
+  max-height: 500px;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 110px;
+}
+
+.baddie-hangout-zone {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elf-container {
+  margin-bottom: 2em;
+  max-width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 250px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.elf {
+  width: 50px;
+}
+
+button {
+  padding: 1em 2em;
+  border: none;
+  font-size: 1.2rem;
+  background-color: var(--dark-green);
+  color: var(--snow);
+  border-radius: 999px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.btn-container {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.button-menu {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.reset-btn {
+  background-color: darkred;
+}
+
+.disable-btn {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.baddie-image {
+  width: 50px;
+  height: 70px;
+}
